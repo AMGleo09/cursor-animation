@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: antiquewhite;
+    cursor: grabbing;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.container span{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30px;
+    min-width: 30px;
+}
+
+.container span::before{
+    content: '';
+    position: absolute;
+    background: url(https://img.freepik.com/free-photo/rest-sunshine-atoll-bungalow-holiday_1232-3876.jpg?t=st=1710502781~exp=1710506381~hmac=219e7f70ee8f6c99d2ab012d039e15d35285967bed7500ba9f1df1f65a641083&w=996);
+
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    transition: 20s;
+    opacity: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
+
+.container span:hover::before{
+    transition: 0s;
+    opacity: 1;
+    width: 1000%;
+    height: 1000%;
+}
